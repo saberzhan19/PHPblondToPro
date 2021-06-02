@@ -20,7 +20,7 @@ if($tmp_login == 'LOGIN' && $tmp_password >= 'PASSWORD' ) {
 } */
 
 // 2 - получилось, тернарного оператор!
-/* $isStatus = ["sa","ray"];
+/* $isStatus = ["sa","ray"];//без таких скобок не работает
 $as = "sa";
 
 $statusResult = (in_array($as, $isStatus) == true) ? "43224656" : "98645623";
