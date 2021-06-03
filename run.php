@@ -8,9 +8,9 @@ echo $name; */
 // $string = "Dama likes";//тип данных строка
 // var_dump($string);
 
-$name = "Dama";
-$as = "Samal";
-$age = 30;
+// $name = "Dama";
+// $as = "Samal";
+// $age = 30;
 // echo "Я видел эту $as(любая переменная) раньше"; 
 
 //можно и так
@@ -204,11 +204,11 @@ if($mood == "bad") {
 
 } */
 
-$names = ["Samal", "Dina", "Asema"];
-$find = "Asema";
+// $names = ["Samal", "Dina", "Asema"];
+// $find = "Asema";
 
 //тернарный оператор 
-$result = (in_array($find, $names) == true) ? "Пользователь успешно найден!" : "Пользователь не найден!";
+// $result = (in_array($find, $names) == true) ? "Пользователь успешно найден!" : "Пользователь не найден!";
 // для сравнения либо тернарный оператор(как-то проще), либо условия со значениями внизу if, else(для наглядности)
 // var_dump(in_array($find, $names))
 
@@ -218,8 +218,31 @@ $result = (in_array($find, $names) == true) ? "Пользователь успе
     $result = "Пользователь не найден!";
 } */
 
-echo $result;
+// echo $result;
 
+//*** 05. Циклы for, while, foreach */
+
+/* for (здесь запис 3 выражен:1. стартовая точка для итераций массива. 2. Условия, которое говор до каких пор выпол код. 3. Простое выражен, которое , что делать) {
+    //code
+} */
+
+// i++ добавляет +1 итак с 0 до 5
+
+/* for ($i = 0; $i < 5; $i++) {
+    // echo "String\n";
+    // перенос строки так и работает. Там может быть echo, print_r, var_dump. И здесь только работает \n 
+    echo '<pre>';
+        echo("String");
+    echo '</pre>';
+} */
+
+$names = ["Samal", "Dina", "Asema"];
+
+for ($i = 0; $i < 3; $i++) {
+    echo '<pre>';
+        echo " Имя - $names[$i]";
+    echo '</pre>';
+}
 
 
 ?>
