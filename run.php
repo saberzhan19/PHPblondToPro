@@ -111,21 +111,21 @@ $users = [
     ]
 
 ];
-
-$post = [
+ 
+$postes = [
     [
         "id" => 1,
-        "title" => "lorem",
+        "title" => "lorem 1",
         "body" => "big"
     ],
     [
         "id" => 2,
-        "title" => "lorem",
+        "title" => "lorem 2",
         "body" => "medium"
     ],
     [
         "id" => 3,
-        "title" => "lorem",
+        "title" => "lorem 3",
         "body" => "small"
     ]
 ];
@@ -237,11 +237,81 @@ if($mood == "bad") {
 } */
 
 $names = ["Samal", "Dina", "Asema"];
+$names [] = "Sapura";
+// можно посчитать количество элементов в массиве если мы не знаем
+// echo count($names);die;
 
-for ($i = 0; $i < 3; $i++) {
+// for ($i = 0; $i < 3; $i++)
+// или делаем запись уневерсальным
+/* for ($i = 0; $i < count($names); $i++) {
     echo '<pre>';
         echo " Имя - $names[$i]";
     echo '</pre>';
+} */
+
+// цикл while
+
+/* $i = 0;
+
+while ($i < count($names)) {
+    echo '<pre>';
+        echo " Имя - $names[$i]";
+        $i++;
+    echo '</pre>';
+} */
+
+// цикл foreach
+
+/* foreach ($names as $name) {
+    echo '<pre>';
+        echo "Имя - $name";
+    echo '</pre>';
+} */
+
+$posts = [
+    [
+        "id" => 1,
+        "title" => "lorem 1",
+        "body" => "big",
+        "public" => true
+    ],
+    [
+        "id" => 2,
+        "title" => "lorem 2",
+        "body" => "medium",
+        "public" => false
+    ],
+    [
+        "id" => 3,
+        "title" => "lorem 3",
+        "body" => "small",
+        "public" => true
+    ]
+];
+
+// 3 вид полное остановка
+$countPosts = 0;
+
+foreach ($posts as $post) {
+  
+    // это делается для 3
+    if ($countPosts == 1) {
+        break;
+    } 
+
+
+    // все это означает, где есть public значение с false пропускаеться
+    if ($post["public"] == false){
+        continue; 
+    }
+  
+    echo '<pre>';
+        echo "ID -" . $post["id"] . "\n";
+        echo "Заголовок -" . $post["title"] . "\n"; 
+    echo '</pre>';
+    
+    // это делается для 3
+    $countPosts++;
 }
 
 
