@@ -299,14 +299,13 @@ foreach ($posts as $post) {
         break;
     } 
 
-
-    // все это означает, где есть public значение с false пропускаеться
+    // все это означает, где есть public со значением  false, пропускаеться
     if ($post["public"] == false){
         continue; 
     }
   
     echo '<pre>';
-        echo "ID -" . $post["id"] . "\n";
+        echo "ID -" . $post["id"] . "\n";// "\n" - переход на следующую строку
         echo "Заголовок -" . $post["title"] . "\n"; 
     echo '</pre>';
     
