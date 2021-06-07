@@ -85,6 +85,7 @@ echo '<pre>';
 echo '</pre>';
  */
 //ассоциативные массивы
+/* 
 $user = [
     "name" => 'Kimbat',
     "surname" => 'Attila',
@@ -137,7 +138,7 @@ $config = [
     "URL" => 123,
     "DB_LOGIN" => "root"
 ];
-
+ */
 /* echo '<pre>';
 print_r($user);
 echo '</pre>';
@@ -239,8 +240,8 @@ if($mood == "bad") {
     echo '</pre>';
 } */
 
-$names = ["Samal", "Dina", "Asema"];
-$names [] = "Sapura";
+/* $names = ["Samal", "Dina", "Asema"];
+$names [] = "Sapura"; */
 // можно посчитать количество элементов в массиве если мы не знаем
 // echo count($names);die;
 
@@ -372,7 +373,7 @@ showText ();
     
 
     // небольшой лайфхак от автора
-    function showText($a = 10, $b = 40) 
+  /*   function showText($a = 10, $b = 40) 
     {
         return $a + $b;
     }
@@ -380,7 +381,64 @@ showText ();
     $asd = 'showText';
 
     echo $asd ();
+ */
 
-    
+
+ // *** 07. Операторы include и require***
+ 
+// подключает другие файлы
+/* require "test.php";
+
+echo '<pre>';
+    echo $name . "\n";
+    echo "$age - years old" ;
+echo '</pre>';
+ */
+
+ // *** 08. $_GET, $_POST и отправка формы ***
+// они методы HTTP запроса, массивы данных
+
+/* echo '<pre>';
+    print_r($_GET);
+echo '</pre>'; */
+//пишется в адресной строке
+//run.php?name=Samal&age=27&skill=hunter
+// $_GET можно писать в адресную строку параметры массива
+
+/* $id =$_GET['id'];
+
+$posts = [
+    [
+    "id" => 1,
+    "title" => "lada"
+    ],
+    [
+    "id" => 2,
+    "title" => "mers"
+    ],
+    [
+    "id" => 3,
+    "title" => "bmw"
+    ]   
+
+    ];
+
+foreach ($posts as $post) {
+    if($post ["id"] == $id){
+        echo "You choise id - " . $post["title"];
+        break;
+    }
+} */
 
 ?>
+
+<!-- ниже дан пример, как отправить и сохранить данные в сторонний файл, через метод post, заполняем форму, после создается файл с данными, в test.php данна форма-->
+<form action="test.php" method="post">
+    <p>Имя</p>
+    <input type="text" name="name">
+    <p>Фамилия</p>
+    <input type="text" name="surname">
+    <p>Возраст</p>
+    <input type="number" name="age"><br><br>
+    <button type="submit">Сохранить данные</button>
+</form>
