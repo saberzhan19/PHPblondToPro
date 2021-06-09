@@ -430,7 +430,7 @@ foreach ($posts as $post) {
     }
 } */
 
-?>
+/* ?>
 
 <!-- ниже дан пример, как отправить и сохранить данные в сторонний файл, через метод post, заполняем форму, после создается файл с данными, в test.php данна форма-->
 <form action="test.php" method="post">
@@ -441,4 +441,48 @@ foreach ($posts as $post) {
     <p>Возраст</p>
     <input type="number" name="age"><br><br>
     <button type="submit">Сохранить данные</button>
+</form> */
+
+
+// *** 09. $_SESSION и cookie ***
+
+// это память о польвателе, различие в том, что куки храняться на стороне клиента и не совсем безопасно. А сессия производить хранение данных на стороне сервера и безопасно для хранение данных
+
+// setcookie('login', 'Dama');
+// setcookie('password', '123');
+// даже закоментировав они в памяти браузера остались, а посмотреть на куки можно с кодом ниже
+
+//уничтожение переменной, обнуление и должен стоят перед выводом echo
+/* unset($_COOKIE['login']);
+//для полного уничтожения из браузера
+setcookie("password", NULL);
+
+echo '<pre>';
+    print_r($_COOKIE);
+    // echo ($_COOKIE['password']);
+echo '</pre>';
+ */
+
+// как работают сессий, ниже дан пример
+
+// session_start();// примичание, для того чтобы, пользоваться с переменной $_SESSION... в любой странице, нужно так писать в начале, то есть в самом вверху
+
+// $_SESSION["login"] = "root";//чтобы уничтожить эту сессию, просто надо написать как внизу
+// unset($_SESSION["login"]);
+
+// echo '<pre>'; - это я применяю, потому что выводить на экран красиво
+/* echo '<pre>';
+    print_r($_SESSION);
+echo '</pre>';
+ */
+
+?>
+
+<!-- Форма для авторизаций -->
+<form action="login.php" method="post">
+    <p>Login</p>
+    <input type="text" name="login">
+    <p>Password</p>
+    <input type="password" name="password"><br><br>
+    <button type="submit">Login</button>
 </form>
