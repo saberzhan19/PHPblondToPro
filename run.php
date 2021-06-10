@@ -476,13 +476,23 @@ echo '</pre>';
 echo '</pre>';
  */
 
-?>
-
-<!-- Форма для авторизаций -->
-<form action="login.php" method="post">
+ 
+// Форма для авторизаций используется вне php после или до  
+/* <form action="login.php" method="post">
     <p>Login</p>
     <input type="text" name="login">
     <p>Password</p>
     <input type="password" name="password"><br><br>
     <button type="submit">Login</button>
+</form> */ 
+
+
+ // *** 10. $_FILES - загрузка файлов ***
+
+?>
+
+<!-- enctype="multipart/form-data" без нее загрузка файла с $_FILES не работает -->
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="image">
+    <button type="submit">upload</button>
 </form>
