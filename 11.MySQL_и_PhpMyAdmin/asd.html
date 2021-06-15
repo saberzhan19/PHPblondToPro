@@ -8,21 +8,21 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/includes/add_product.php" method="post">
+    <form action="homework11/fight.php" method="post">
         <p>Название товара:</p>
         <input type="text" name="name">
         <p>Описание:</p>
         <input type="text" name="description">
         <p>Категория товара:</p>
         <select name="category_id">
-            <option value="~">...</option>
-            <option value="Дет">Детские игрушки</option>
-            <option value="Де">Орг техника</option>
+            <!-- я отправлял записи в БД где value запсывается, поэтому так выглядет -->
+            <option value="Ничего">...</option>
+            <option value="Детские игрушки">Детские игрушки</option>
+            <option value="Орг техника">Орг техника</option>
         </select>
         <p>Цена:</p>
         <input type="text" name="price"><br><br>
         <button type="submit">Добавить</button>
-
 
     </form>
 </body>

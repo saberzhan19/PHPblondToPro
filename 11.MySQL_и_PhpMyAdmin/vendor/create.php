@@ -11,7 +11,7 @@ $date = date("Y-m-d");
 // mysqli_query($db, "INSERT INTO `article`(`id`, `title`, `body`, `date`) VALUES (NULL, '$title', '$body', '$date')");
 
 // можно сделать небольшую проверку mysqli_query, тоесть сверху код короче
-$quick = mysqli_query($db, "INSERT INTO `article`(`id`, `title`, `body`, `date`) VALUES (NULL, '$title', '$body', '$date')");
+$quick = mysqli_query($db, "INSERT INTO article(id, title, body, date) VALUES (NULL, '$title', '$body', '$date')");
 
 if (!$quick) {
     die("Error add new article");
