@@ -5,8 +5,7 @@ require_once __DIR__ . '/../../MySQL_11/vendor/db.php';
     $article = mysqli_query($db, "SELECT * FROM `products`");
         $all = mysqli_fetch_all($article);
 
-        foreach ($all as $alls) {
-    
+        foreach ($all as $alls) {    
 
 ?>
 
@@ -23,7 +22,7 @@ require_once __DIR__ . '/../../MySQL_11/vendor/db.php';
         
         <td><a href="hwasart.php?id=<?= $alls[0] ?>">Посмотреть описание товара</a></td>
         <!-- Ниже будет дан как изменить пост -->
-        <td><a href="/../14.Обновление данных в таблице/article_edit.php?id=<?= $alls[0] ?>">Изменить описание товара</a></td>
+        <td><a href="hwart_edit.php?id=<?= $alls[0] ?>">Изменить описание товара</a></td>
     </tr>
 </table>
 

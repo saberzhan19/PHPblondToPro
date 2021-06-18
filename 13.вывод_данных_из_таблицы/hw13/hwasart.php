@@ -8,12 +8,15 @@ $article = mysqli_fetch_assoc($article);
 
 ?>
 
-<h1><?= $article["title"] ?></h1>
+<h1><?= $article["name"] ?></h1>
 
 <p>
-    <?= $article["body"] ?>
+    <?= $article["description"] ?>
 </p>
 
 <p>
-    <i><?= $article["date"] ?></i>    
+    <i><?= $article["category_id"] ?></i>    
+</p>
+<p>
+    <i><?= $article["price"] ?></i>    
 </p>
