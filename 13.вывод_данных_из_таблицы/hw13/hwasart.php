@@ -1,4 +1,19 @@
 <?php 
 
-require_once __DIR__ . '/../MySQL_11/vendor/db.php';
+require_once __DIR__ . '/../../MySQL_11/vendor/db.php';
 
+$id = $_GET["id"];
+$article = mysqli_query($db, "SELECT * FROM `products` WHERE `id` = '$id'");
+$article = mysqli_fetch_assoc($article);
+
+?>
+
+<h1><?= $article["title"] ?></h1>
+
+<p>
+    <?= $article["body"] ?>
+</p>
+
+<p>
+    <i><?= $article["date"] ?></i>    
+</p>
