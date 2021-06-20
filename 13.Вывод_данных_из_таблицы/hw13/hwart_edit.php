@@ -8,13 +8,15 @@ $article = mysqli_fetch_assoc($article);
 
 ?>
 
-<form action="hwupdate.php" method="post">
+<form action="unknow/hwupdate.php" method="post">
     <input type="hidden" name="id" value="<?= $article["id"] ?>"></input>
     <p>Title of products</p>
     <input type="text" name="name" value="<?= $article["name"] ?>"></input>
     <p>Full description</p>
     <input type="text" name="description" value="<?= $article["description"] ?>">
-    <p>Type of products</p>
-    <textarea name="category_id"><?= $article["category_id"] ?></textarea><br><br>
+    <!-- <p>Type of products</p>
+    <textarea name="category_id"><?= $article["category_id"] ?></textarea> -->
+    <p>Price</p>
+    <input type="text" name="price" value="<?= $article["price"] ?>"></input><br><br>
     <button type="submit">Save changes</button>
 </form>
