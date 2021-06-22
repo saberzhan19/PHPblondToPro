@@ -2,8 +2,8 @@
 
 require_once __DIR__ . '/../../MySQL_11/vendor/db.php';
 
-    $article = mysqli_query($db, "SELECT * FROM `products`");
-        $all = mysqli_fetch_all($article);
+    $articles = mysqli_query($db, "SELECT * FROM `products`");
+        $all = mysqli_fetch_all($articles);
 
         foreach ($all as $alls) {    
 
@@ -23,6 +23,7 @@ require_once __DIR__ . '/../../MySQL_11/vendor/db.php';
         <td><a href="hwasart.php?id=<?= $alls[0] ?>">Посмотреть описание товара</a></td>
         <!-- Ниже будет дан как изменить пост -->
         <td><a href="hwart_edit.php?id=<?= $alls[0] ?>">Изменить описание товара</a></td>
+        <td><a href="hw_delete.php?id=<?= $alls[0] ?>">Удалить статью</a></td>
     </tr>
 </table>
 
@@ -35,3 +36,16 @@ require_once __DIR__ . '/../../MySQL_11/vendor/db.php';
 echo '</pre>'; */
 
 ?>    
+
+<form action="hw_create.php" method="post">
+    <input type="hidden" name="id"></input>
+    <p>Title of products</p>
+    <input type="text" name="name"></input>
+    <p>Full description</p>
+    <input type="text" name="description" >
+    <p>Type of products</p>
+    <textarea name="category_id"></textarea>
+    <p>Price</p>
+    <input type="text" name="price"></input><br><br>
+    <button type="submit">Save changes</button>
+</form>
