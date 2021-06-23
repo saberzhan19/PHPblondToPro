@@ -4,7 +4,7 @@ require_once __DIR__ . '/../../MySQL_11/vendor/db.php';
 
 
 $id = $_POST["id"];
-$name = $_POST["name"];
+$call = $_POST["call"];
 $description = $_POST["description"];
 $category_id = $_POST["category_id"];
 $price = $_POST["price"];

@@ -8,7 +8,7 @@ $articles = mysqli_fetch_assoc($articles);
 
 ?>
 
-<h1><?= $articles["name"] ?></h1>
+<h1><?= $articles["call"] ?></h1>
 
 <p>
     <?= $articles["description"] ?>

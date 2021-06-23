@@ -21,3 +21,21 @@ $article = mysqli_fetch_assoc($article);//assoc это доступ к 1 клю�
 <p>
     <i><?= $article["date"] ?></i>    
 </p>
+
+<ul>
+    <?php
+        $comments = mysqli_query($db, "SELECT * FROM `comments` WHERE `post_id` = '$id'");
+        //так как у нас может быть много коментариев пишем
+        $forcomments = mysqli_fetch_all($comments);
+
+        foreach($forcomments as $forcomment){
+            ?>
+
+        <li><?= $forcomment['1'] ?></li>
+        
+        <?php 
+        
+        }
+    
+    ?>
+</ul>

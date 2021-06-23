@@ -23,7 +23,7 @@ require_once __DIR__ . '/../../MySQL_11/vendor/db.php';
         <td><a href="hwasart.php?id=<?= $alls[0] ?>">Посмотреть описание товара</a></td>
         <!-- Ниже будет дан как изменить пост -->
         <td><a href="hwart_edit.php?id=<?= $alls[0] ?>">Изменить описание товара</a></td>
-        <td><a href="hw_delete.php?id=<?= $alls[0] ?>">Удалить статью</a></td>
+        <td><a href="hw_delete.php?id=<?= $alls[0] ?>">Удалить товара</a></td>
     </tr>
 </table>
 
@@ -40,7 +40,7 @@ echo '</pre>'; */
 <form action="hw_create.php" method="post">
     <input type="hidden" name="id"></input>
     <p>Title of products</p>
-    <input type="text" name="name"></input>
+    <input type="text" name="call"></input>
     <p>Full description</p>
     <input type="text" name="description" >
     <p>Type of products</p>

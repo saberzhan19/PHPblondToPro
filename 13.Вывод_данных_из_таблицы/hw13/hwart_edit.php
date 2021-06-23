@@ -11,7 +11,7 @@ $articles = mysqli_fetch_assoc($articles);
 <form action="hwupdate.php" method="post">
     <input type="hidden" name="id" value="<?= $articles["id"] ?>"></input>
     <p>Title of products</p>
-    <input type="text" name="name" value="<?= $articles["name"] ?>"></input>
+    <input type="text" name="call" value="<?= $articles["call"] ?>"></input>
     <p>Full description</p>
     <input type="text" name="description" value="<?= $articles["description"] ?>">
     <p>Type of products</p>
