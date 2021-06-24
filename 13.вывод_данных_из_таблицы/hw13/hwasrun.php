@@ -1,13 +1,5 @@
-<?php 
 
-require_once __DIR__ . '/../../MySQL_11/vendor/db.php';
-
-    $articles = mysqli_query($db, "SELECT * FROM `products`");
-        $all = mysqli_fetch_all($articles);
-
-        foreach ($all as $alls) {    
-
-?>
+<!-- вот такая перестановка или порядок форм играет роль!)) -->
 
 <table>
     <tr>
@@ -15,6 +7,18 @@ require_once __DIR__ . '/../../MySQL_11/vendor/db.php';
         <th>Название товара</th>
         <th>Цена</th>
     </tr>
+
+    <?php 
+
+    require_once __DIR__ . '/../../MySQL_11/vendor/db.php';
+
+        $articles = mysqli_query($db, "SELECT * FROM `products`");
+            $all = mysqli_fetch_all($articles);
+
+            foreach ($all as $alls) {    
+
+    ?>
+
     <tr>
         <td><?= $alls[0] ?></td>
         <td><?= $alls[1] ?></td>
@@ -25,24 +29,25 @@ require_once __DIR__ . '/../../MySQL_11/vendor/db.php';
         <td><a href="hwart_edit.php?id=<?= $alls[0] ?>">Изменить описание товара</a></td>
         <td><a href="hw_delete.php?id=<?= $alls[0] ?>">Удалить товара</a></td>
     </tr>
-</table>
 
 <?php
 
-    }
+}
 
 /* echo '<pre>';
-    print_r($all);
+print_r($all);
 echo '</pre>'; */
 
 ?>    
 
+</table>
+
 <form action="hw_create.php" method="post">
-    <input type="hidden" name="id"></input>
+    <input type="hidden" name="id">
     <p>Title of products</p>
-    <input type="text" name="call"></input>
+    <input type="text" name="call">
     <p>Full description</p>
-    <input type="text" name="description" >
+    <input type="text" name="description">
     <p>Type of products</p>
     <textarea name="category_id"></textarea>
     <p>Price</p>
