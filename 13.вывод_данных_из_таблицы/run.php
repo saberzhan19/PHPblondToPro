@@ -51,3 +51,6 @@ echo '</pre>'; */
     <textarea name="body"></textarea><br><br>
     <button type="submit">Send article</button>
 </form>
+
+<!-- точка(на один шаг) или слэш(/, полностью на главное) играет роль, я внизу возвращаю на главную страницу -->
+<a href="/">To main</a>
