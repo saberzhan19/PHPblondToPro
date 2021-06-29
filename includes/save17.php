@@ -21,4 +21,5 @@ $user["password"] = $password;
 R::store($user);
 
 //и перенаправляем на страницу
-header('Location: /17. ORM RedBeanPhp и защита данных от SQL инъекций/edit.php?id=' . $id);// один вариант
+// header('Location: /17. ORM RedBeanPhp и защита данных от SQL инъекций/edit.php?id=' . $id);// один вариант
+header('Location: /17. ORM RedBeanPhp и защита данных от SQL инъекций/index.php');// один вариант
