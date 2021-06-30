@@ -23,4 +23,8 @@
     <br>
     <br>
     <button type="submit">Save new user</button>
+    <br>
+    <br>
+    <button><a href="./">Back</a></button>
+
 </form>

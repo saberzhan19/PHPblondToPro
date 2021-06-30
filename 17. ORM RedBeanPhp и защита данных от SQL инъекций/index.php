@@ -107,9 +107,10 @@ $users = R::findAll('users');
 <style>
     th {
         background: grey;
+        padding: 4px;
     }
     td {
         background: yellow;
-
+        padding: 4px;
     }
 </style>

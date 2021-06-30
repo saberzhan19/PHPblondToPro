@@ -24,3 +24,4 @@ if($user["name"] === NULL) {
 <h1>Привет, <?= $user["name"] ?></h1>
 <h3>Логин: <?= $user["login"] ?></h3>
 <h4>Email: <?= $user["email"] ?></h4>
+<button><a href="./">Back</a></button>
