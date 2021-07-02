@@ -1,40 +1,10 @@
 <?php 
 
 require_once "functions.php";
+require_once "classes.php";
 
 $names = ["Samal", "Asel", "Dina"];
 
-class Name {
-    //внизу свойство, пустые переменные
-    public $names;
-    public $new_name;
-    public $update_name;
-    public $name_key;
-    public $remove_name;
-    
-    //внизу методы, функция для добавления имени
-    public function add_name()
-    {
-        $this->names[] = $this->new_name;
-        return $this->names;
-    }
-
-    public function remove_name()
-    {
-        foreach ($this->names as $key => $name) {
-            if ($this->remove_name === $name){
-                unset($this->names[$key]);
-            }
-        }
-        return $this->names;
-    }
-
-    public function update_name()
-    {
-        $this->names[$this->name_key] = $this->update_name;
-        return $this->names;
-    }
-}
 
 // $at = new Name();
 // // $at->add_name($names, "Elmira");
@@ -48,17 +18,37 @@ class Name {
 
 // $list = add_name($names, "Janel"); //-1-
 
-$name = new Name;//скобки [] можно не использовать, если это не конструктор
-$name->names = $names;
+/* 
+ООП 
+ */
 
-//Добавил имя и место из списка
-$name->update_name = "Dinara";
+$name = new Name;//скобки [] можно не использовать, если это не конструктор
+$name->names = $names;//["Samal", "Asel", "Dina"]
+
+//Обновил имя и место из списка
+/* $name->update_name = "Dinara";
 $name->name_key = 0;
 
 $name->update_name();
 
 $name->new_name = "Makpal";
 $name->add_name();
+ */
+$name->remove_name = "Asel";
+$name->remove_name();
+
+print_r($name->remove_name());
+
+/* 
+Просто функций
+ */
+
+ $new_list = add_name($names, "Luisa");
+ $new_list2 = remove_name($names, "Dina");
+ $new_list3 = update_name($names, 1, "Kristina");
+
+
+
     /* 
     <!-- внизу код на добавление имени -1- -->
     <!-- <?php var_dump($list); ?> -->
@@ -68,11 +58,14 @@ $name->add_name();
     <!-- <?php var_dump(update_name($names, 0, "Diana")); ?> -->
     <!-- внизу используется class добавлям имя-->
     <!-- <?php var_dump($at->add_name()); ?>
-    <?php var_dump($horse->add_name()); ?> --> */
+    <?php var_dump($horse->add_name()); ?> --> 
+    // <!-- внизу используется class изменяем имя-->
+    // <!-- <?php var_dump($name->update_name());?> -->
+    */
 ?>
 
-<pre>
-    <!-- внизу используется class удаляем имя-->
-    <?php var_dump($name->update_name()); ?>
+<!-- <pre>
+     <!-- внизу используется class изменяем имя, один из вариантов, к тому же он универсальный-->
+    <?php var_dump($name->names); ?>
 
-</pre>
+</pre> 
