@@ -21,7 +21,7 @@ $users = R::findAll('users');
 
 <form action="/includes/add.php" method="post">
     <p>name</p>
-    <input type="text" name="name">
+    <input type="text" name="name" required>
     <p>login</p>
     <input type="text" name="login">
     <p>email</p>
@@ -31,6 +31,7 @@ $users = R::findAll('users');
     <br>
     <br>
     <button type="submit">Add new user</button>
+    <button onclick="document.location='http://phpblondtopro'">Back to main</button>
 </form>
 
 <!-- ниже как получать данные из БД, это 2 действие -->
