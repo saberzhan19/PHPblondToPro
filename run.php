@@ -310,7 +310,7 @@ foreach ($posts as $post) {
     }
   
     echo '<pre>';
-        echo "ID -" . $post["id"] . "\n";// "\n" - переход на следующую строку
+        echo "ID -" . $post["id"] . "\n";// это"\n" - переход на следующую строку
         echo "Заголовок -" . $post["title"] . "\n"; 
     echo '</pre>';
     
