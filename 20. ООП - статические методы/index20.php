@@ -11,7 +11,7 @@ require_once "audi.php";
 
 // $machine->show();//это обычный объектный метод
 
-echo "<br><br>";
+// echo "<br><br>";
 
 // echo $machine->getPrice();
 

@@ -7,13 +7,15 @@ class Worker {
     public static $all;
     public static $save;
 
-    public static show() {
-        $worker = ;
-        echo "
-            <div>
-                <input type="text"></input>
-            </div>
-        ";
+    public static function show() {
+       return self::$all;
     }
+
+    public static function workers($name, $email, $age, $profession, $register_time)
+    {
+
+    }
+
+    
 
 }
