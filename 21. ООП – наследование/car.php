@@ -7,8 +7,8 @@ class audi extends CarDetails
 // extends TesrClass -1-
 {
     //создаем свойства
-    protected $year;
     protected $model;
+    private $year;
     protected $horsepower;
 
     //заполняем свойства
@@ -25,11 +25,13 @@ class audi extends CarDetails
             "model" => $this->model,
             "year" => $this->year,
             "horsepower" => $this->horsepower,
-            "price" => $this->getPrice()
+            "price" => $this->getPrice(),
+            "tax" => $this->getTax(),
+            "review" => $this->reviewText()
         ];
     }
 
-    protected function getPrice()
+    private function getPrice()
     {
         $price = 0;//временная перменная
 

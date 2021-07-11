@@ -1,7 +1,9 @@
 <?php 
 
+require_once "Review.php";
+
 //вычесление налога по его характеристикам
-class CarDetails
+class CarDetails extends carReview
 {
     public function getTax()
     {
