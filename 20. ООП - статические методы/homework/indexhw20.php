@@ -10,14 +10,14 @@ require_once "workers.php";
 <br><br>
 <center>
     <form action="sendletter.php" method="post" >
-        <p>Есем:</p>
-        <input type="text" placeholder="name" required><br><br>
+        <p>Аты:</p>
+        <input type="text" name="name" placeholder="name" required><br><br>
         <p>Email:</p>
-        <input type="email" placeholder="email" required><br><br>
-        <p>Возраст:</p>
-        <input type="number" placeholder="age" required><br><br>
-        <p>Работа:</p>
-        <input type="text" placeholder="proffession"><br><br>
+        <input type="email" name="email" placeholder="email" required><br><br>
+        <p>Жасы:</p>
+        <input type="number" name="age" placeholder="age" required><br><br>
+        <p>Мамандыгы:</p>
+        <input type="text" name="proffesion" placeholder="proffession"><br><br>
         <button type="submit">Send message</button>
     </form>
     <button onclick="document.location='./'">Back to main</button>    

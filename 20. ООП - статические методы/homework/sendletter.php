@@ -1,6 +1,9 @@
 <?php 
 
 $name = $_POST["name"];
+$email = $_POST["email"];
+$age = $_POST["age"];
+$proffesion = $_POST["proffesion"];
 
 $content = "Имя: $name\nЭлек.адрес: $email\nВозраст: $age\nПрофессия: $proffesion\n";
 
@@ -19,4 +22,6 @@ if(!$what){
 
 <br>
 <br>
-<a href="./">Back to main</a>
+<button onclick="location.href='indexhw20.php'">FacePage</button>
+<button onclick="location.href='/   ../'">Main</button>
+<!-- <a href="./">Back to main</a> -->
