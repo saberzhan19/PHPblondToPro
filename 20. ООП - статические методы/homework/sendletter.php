@@ -1,11 +1,11 @@
 <?php 
-
+// все это до if должно быть записано, иначе ошибка
 $name = $_POST["name"];
 $email = $_POST["email"];
 $age = $_POST["age"];
 $proffesion = $_POST["proffesion"];
 
-$content = "Имя: $name\nЭлек.адрес: $email\nВозраст: $age\nПрофессия: $proffesion\n";
+$content = "Имя: $name\nЭлек.адрес: $email\nВозраст: $age года\nПрофессия: $proffesion\n";
 
 $filename = "tableWorkers.txt";
 
@@ -23,5 +23,5 @@ if(!$what){
 <br>
 <br>
 <button onclick="location.href='indexhw20.php'">FacePage</button>
-<button onclick="location.href='/   ../'">Main</button>
+<button onclick="location.href='/../'">Main</button>
 <!-- <a href="./">Back to main</a> -->
