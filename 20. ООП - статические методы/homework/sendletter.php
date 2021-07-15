@@ -4,16 +4,21 @@ $name = $_POST["name"];
 $email = $_POST["email"];
 $age = $_POST["age"];
 $proffesion = $_POST["proffesion"];
+$register_time = $_POST["register_time"];
 
-$content = "Имя: $name\nЭлек.адрес: $email\nВозраст: $age года\nПрофессия: $proffesion\n";
+$register_time = date('Y-m-d H:i:s');//только так заработала цель 1
 
+$content = "\nЕсімі: $name\nЭлек.адрес: $email\nЖасы: $age жыл\nПрофессия: $proffesion\nТіркелген уақыты: $register_time\n";
+// \n обозначает перенос строки
 $filename = "tableWorkers.txt";
 
-$what = fopen($filename, "w");
-fwrite($what, $content);
-fclose($what);
+// FILE_APPEND добавляет в файл текст один за другим из формы и цель 2 заработал
+file_put_contents($filename, $content, FILE_APPEND);
+// $what = fopen($filename, "w");
+// fwrite($what, $content);
+// fclose($what);
 
-if(!$what){
+if(!file_put_contents){
     echo "Что-то не так!";
 } else{
     echo "Отправили!";

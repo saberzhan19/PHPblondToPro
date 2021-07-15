@@ -1,8 +1,8 @@
 <?php 
 
 // Задачи
-// занести временную метку, когда пользователь был добавлен в формате День-Месяц-Год Час:Минуты
-// добавленные пользователи не повторялись
+// занести временную метку, когда пользователь был добавлен в формате День-Месяц-Год Час:Минуты - сделал цель 1!
+// добавленные пользователи не повторялись - сделал цель 2!
 
 require_once "workers.php";
 
@@ -22,6 +22,10 @@ require_once "workers.php";
         <input type="number" name="age" placeholder="age" required><br><br>
         <p>Мамандыгы:</p>
         <input type="text" name="proffesion" placeholder="proffession"><br><br>
+        <input type="hidden" name="register_time">
+        <!-- <?php echo 'Текущее время: ' . date('Y-m-d H:i:s') . "\n";?> -->
+        <br>
+
         <button type="submit">Send message</button>
     </form>
     <button onclick="document.location='./'">Back to main</button>    
